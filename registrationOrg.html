@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["registrationForm"]["name"].value;
+            var userId = document.forms["registrationForm"]["userId"].value;
+            var mobileNumber = document.forms["registrationForm"]["mobileNumber"].value;
+            var adharNumber = document.forms["registrationForm"]["adharNumber"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+            var address = document.forms["registrationForm"]["address"].value;
+
+            if (name === "") {
+                alert("Please fill in the Name field.");
+                return false;
+            }
+
+            // Check for invalid characters in the name field
+            var nameRegex = /^[a-zA-Z ]+$/;
+            if (!name.match(nameRegex)) {
+                alert("Invalid characters in the Name field. Only alphabets and spaces are allowed.");
+                return false;
+            }
+
+            if (userId === "") {
+                alert("Please fill in the User ID field.");
+                return false;
+            }
+
+            // Check for spaces in the User ID field
+            var userIdRegex = /^\S+$/;
+            if (!userId.match(userIdRegex)) {
+                alert("User ID should not contain spaces.");
+                return false;
+            }
+
+            if (mobileNumber === "") {
+                alert("Please fill in the Mobile Number field.");
+                return false;
+            }
+
+            // Check for non-digit characters in the Mobile Number field
+            var mobileRegex = /^[0-9]+$/;
+            if (!mobileNumber.match(mobileRegex)) {
+                alert("Mobile Number should contain only digits.");
+                return false;
+            }
+
+            if (adharNumber === "") {
+                alert("Please fill in the Adhar Number field.");
+                return false;
+            }
+
+            // Check for 12 digits in the Adhar Number field
+            var adharRegex = /^\d{12}$/;
+            if (!adharNumber.match(adharRegex)) {
+                alert("Adhar Number should contain 12 digits.");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Please fill in the Email field.");
+                return false;
+            }
+
+            if (address === "") {
+                alert("Please fill in the Address field.");
+                return false;
+            }
+            if (pwd === "") {
+                alert("Please fill in the Password field.");
+                return false;
+            }
+            if (pwd-repeat === "") {
+                alert("Please fill in the confirm password field.");
+                return false;
+            }
+            if (cuserId === "") {
+                alert("Please fill all the fields.");
+                return false;
+            }
+            if (cfmobileNumber === "") {
+                alert("Please fill all the fields.");
+                return false;
+            }
+            if (name === "") {
+                alert("Please fill all the Address fields.");
+                return false;
+            }
+            if (mmobileNumber === "") {
+                alert("Please fill all the Address fields.");
+                return false;
+            }
+            if (strength === "") {
+                alert("Please fill all the Address fields");
+                return false;
+            }
+            if (org === "") {
+                alert("Please select the field");
+                return false;
+            }
+            if (iso === "") {
+                alert("Please select the field");
+                return false;
+            }
+          
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</head>
+<body style = "background-color: rgba(255, 248, 220, 0.705)">
+</body>
+    <form name="registrationForm" onsubmit="return validateForm()">
+      <center>
+        <label for="name">Enter Name of the Organisation:</label><br>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="userId">Enter User ID:</label><br>
+        <input type="text" id="userId" name="userId" required>
+        <br><br>
+
+        <label for="pwd">Enter Password</label><br>
+        <input type="password" name="pwd" id="pwd" required/>
+        <br><br>
+              
+        <label for="pwd-repeat">Confirm Password</label><br>
+        <input type="password" name="pwd-repeat" id="pwd-repeat" required/>
+        <br><br>
+
+        <label for="CheifOfficer">Enter Name Of the Cheif Executive Officer:</label><br>
+        <input type="text" id="cuserId" name="cuserId" required>
+        <br><br>
+        
+        <label for="mobileNumber">Enter Mobile Number Of Chief Officer:</label><br>
+        <input type="text" id="cfmobileNumber" name="cfmobileNumber" required>
+        <br><br>
+
+        <label for="manager">Enter Name Of the Manager:</label><br>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="mobileNumber">Enter Mobile Number Of Manager:</label><br>
+        <input type="text" id="mmobileNumber" name="mmobileNumber" required>
+        <br><br>
+
+        <label for="strength">Enter number of people in the Organisation</label><br>
+        <input type="number" name="strength" id="strength" required />
+        <br><br>
+
+        <label for="email">Enter Email of the Organisation:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="address">Enter Organisation Address:</label><br>
+        <textarea id="address" name="address" required></textarea>
+        <br><br>
+
+        <label for="orgType" id = "org" ><b>Select Type of Organisation : </b></label><br>
+        <input type ="checkbox" id = "Environmental" name = "Environmental" value="Environmental Charities">
+        <label for = "Environmental" >Environmental Charities<label><br>
+
+        <input type ="checkbox" id = "Children" name = "Children" value="Children's Charities">
+        <label for = "Children" >Children's Charities<label><br>
+
+        <input type ="checkbox" id = "Human" name = "Human" value="Human Rights Charities">
+        <label for = "Human" >Human Rights Charities<label><br>
+
+        <input type ="checkbox" id = "Disaster" name = "Disaster" value="Disaster Relief Charities">
+        <label for = "Disaster" >Disaster Relief Charities<label><br>
+
+        <input type ="checkbox" id = "Research" name = "Research" value="Research Charities">
+        <label for = "Research" >Research Charities<label><br>
+
+        <input type ="checkbox" id = "Religion" name = "Religion" value="Religion or Faith-Based Charities">
+        <label for = "Religion" >Religion or Faith-Based Charities<label><br>
+
+        <input type ="checkbox" id = "Senior" name = "Senior" value="Human Rights Charities">
+        <label for = "Senior" >Senior Citizen Charities<label><br>
+
+        <input type ="checkbox" id = "Cultural" name = "Cultural" value="Cultural Charities">
+        <label for = "Cultural" >Cultural Charities<label><br>
+
+        <input type ="checkbox" id = "Scholar" name = "Scholar" value="Scholar-Led Charities">
+        <label for = "Scholar" >Scholar-Led Charities<label><br>
+
+        <input type ="checkbox" id = "Pro" name = "Pro" value="Pro Bono Law Charities">
+        <label for = "Pro" >Pro Bono Law Charities<label><br>
+
+        <input type ="checkbox" id = "Animal" name = "Animal" value="Animal-Based Charities">
+        <label for = "Animal" >Animal-Based Charities<label><br>
+
+        <input type ="checkbox" id = "Sports" name = "Sports" value="Sports-Based Charities">
+        <label for = "Sports" >Sports-Based Charities<label><br>
+
+        <input type ="checkbox" id = "Conservation" name = "Conservation" value="Human Rights Charities">
+        <label for = "Conservation" >Cultural and Arts-Based Charities<label><br>
+
+        <input type ="checkbox" id = "other" name = "other" value="other">
+        <label for = "other" >other<label><br>
+        <br>
+
+        <label for="other">Other :</label>
+        <input type="text" id="other" name="other" placeholder="Enter type of Organisation">
+              <br><br>
+
+        <label for="file">Add ISO certificate of Organization</label><br>
+        <input type="file" name="iso" id="iso" required/> <br><br>
+
+        <input type="submit" value="Save"><br><br>
+        <button onclick ="window.location.href = 'org_login.html'" >LOGIN</a></button>
+      </center>
+    </form>
+</body>
+</html>

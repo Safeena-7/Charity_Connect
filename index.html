@@ -1,0 +1,28 @@
+<!DOCTYPE html5>
+<html lang = "en">
+    <head>
+      <meta charset="UTF-8">
+        <title>Welcome page </title>
+    </head>
+        <body style = "background-color: rgba(255, 248, 220, 0.705)">
+            <h1><b><center>WELCOME TO CHARITY CONNECT</center></b></h1>
+            <center><video id="logoVideo" height="200" autoplay loop>
+                <source src="Presentation1_Trim.mp4" type="video/mp4">
+              </video>
+
+            </center>
+            <center><button onclick ="window.location.href = 'loginForm.html'" >LOGIN</a></button></center>
+            <center><h1>Connecting those in need with those who can help...</center</h1>
+            <h1><i><center><marquee>Alone we can do little ,Together we can do so much</marquee></center></i></h1>
+            <script>
+                // Pause the video when the user switches to another tab
+                document.addEventListener('visibilitychange', function () {
+                  if (document.visibilityState === 'visible') {
+                    document.getElementById('logoVideo').play();
+                  } else {
+                    document.getElementById('logoVideo').pause();
+                  }
+                });
+              </script>
+    </body>
+</html>

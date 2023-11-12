@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body background="wall..png" >
+  <div class="container">
+  <h2><b>User Login</b></h2>
+    <center><img height = "100" src = "user2.png"></img></center>
+    <form id="loginForm" action="lastpage.html" method="post">
+      <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+    <center><input type="submit" value="Login">
+      <div>
+        <p>New user ?<br><a href="registerUser.html">sign up here</a>
+         </div></center>
+    </form>
+  </div>
+  <br><br>
+  <script>
+    document.getElementById('loginForm').onsubmit = function(event) {
+        var userId = document.getElementById('userId').value;
+        var password = document.getElementById('password').value;
+
+        if (userId === '' && password === '') {
+            alert('Please enter User ID and Password.');
+            event.preventDefault();
+        } else if (userId === '') {
+            alert('Please enter User ID.');
+            event.preventDefault();
+        } else if (password === '') {
+            alert('Please enter Password.');
+            event.preventDefault();
+        }
+    };
+</script>
+</body>
+</html>

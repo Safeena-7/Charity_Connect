@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+</head>
+<body>
+    <center>
+    <h1>Edit Profile</h1><br>
+    <form action="/update_profile" method="post" enctype="multipart/form-data">
+        <p>Current logo</p>
+        <img src = "save.png"><br>
+        <label for="profilePicture">Add New Logo :</label>
+        <input type="file" id="profilePicture" name="profilePicture"><br><br>
+
+        <label for=" Add Images">Add Images:</label>
+        <input type="file" id="images" name="images[]" multiple><br>
+        <p>Your Gallery </p>
+        <img src = "save1..jpg" height="150">
+        <img src = "save2.jpg" height="150">
+        <img src = "save3.jpg" height="150">
+
+        <p><b><a href = "registrationOrg.html">Edit Registration form </a></b></p>
+
+        <input type="submit" value="Save Changes">
+    </center>
+    </form>
+</body>
+</html>

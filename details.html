@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body style = "background-color: rgba(255, 248, 220, 0.705)">  
+ <form>  
+    <center>
+        <img src = "ibm.jpg" height="150"> <br>
+    <label>Choose the place : </label>  
+    <select id="mySelect" onchange="goToLink()">
+        <option value="">Select an option</option>
+        <option value="adilabad.html">Adilabad</option>
+        <option value="">Bhadradri kothagudem</option> 
+    </center>
+      </select>
+      
+      <script>
+      function goToLink() {
+        var selectElement = document.getElementById("mySelect");
+        var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+        
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      }
+      </script>
+      </select>  
+    </form>   
+   </body>  
+   </html>
+      
